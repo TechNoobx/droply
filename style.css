@@ -1,0 +1,1224 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1120;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.logo {
+    font-size: 42px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #4385ff;
+}
+
+header p {
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 25px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    color: #aab5c7;
+    line-height: 1.7;
+}
+
+.code-box {
+    background: #172238;
+    padding: 25px;
+    border: 1px solid #293954;
+    border-radius: 16px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 16px;
+    background: #0b1120;
+    color: white;
+    border: 1px solid #34445f;
+    border-radius: 9px;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #4385ff;
+}
+
+button {
+    background: #3978f6;
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #245fd2;
+}
+
+.code-box button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.features div {
+    background: #172238;
+    padding: 18px 8px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #293954;
+}
+
+.workspace-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.workspace-header p {
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+.editor, .upload-section {
+    background: #172238;
+    border: 1px solid #293954;
+    padding: 22px;
+    border-radius: 14px;
+    margin-bottom: 22px;
+}
+
+.editor h3, .upload-section h3 {
+    margin-bottom: 16px;
+}
+
+textarea {
+    width: 100%;
+    height: 230px;
+    resize: vertical;
+    padding: 15px;
+    background: #0b1120;
+    border: 1px solid #34445f;
+    border-radius: 9px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 15px;
+}
+
+#saveStatus {
+    margin-left: 12px;
+    color: #4ade80;
+}
+
+input[type="file"] {
+    width: 100%;
+    margin: 15px 0;
+    color: #cbd5e1;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: #0b1120;
+    padding: 12px;
+    border-radius: 9px;
+    margin-top: 10px;
+    overflow-wrap: anywhere;
+}
+
+.file-item a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.file-preview {
+    max-width: 100px;
+    max-height: 80px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.back-btn {
+    background: #334155;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #64748b;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .workspace-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+}
+.delete-button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.delete-button:hover {
+    background: #b02a37;
+}
+.download-button {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 9px 15px;
+    border-radius: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background: #1d4ed8;
+}
+#uploadProgress {
+    width: 100%;
+    height: 12px;
+    margin-top: 12px;
+    accent-color: #2563eb;
+}
+
+#uploadProgressText {
+    font-size: 14px;
+    color: #9ca3af;
+}
+#fileSearch {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    background: #172554;
+    color: white;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#fileSearch:focus {
+    border-color: #3b82f6;
+}
+
+#fileSearch::placeholder {
+    color: #94a3b8;
+}
+.owner-controls {
+    background: #172554;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.owner-controls h3 {
+    color: white;
+    margin-top: 0;
+}
+
+.owner-controls button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 11px 16px;
+    border-radius: 7px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.owner-controls .danger-button {
+    background: #dc2626;
+}
+
+.owner-controls button:hover {
+    opacity: 0.85;
+}
+
+/* Loading Screen */
+.loading-screen {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 12, 30, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.loading-screen.hidden {
+    display: none;
+}
+
+.loading-box {
+    background: #14213d;
+    padding: 35px 45px;
+    border-radius: 16px;
+    text-align: center;
+    color: white;
+    width: 280px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.loading-spinner {
+    width: 48px;
+    height: 48px;
+    border: 5px solid #344563;
+    border-top: 5px solid #4da3ff;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: droplySpin 0.8s linear infinite;
+}
+
+@keyframes droplySpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-box h3 {
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.loading-box p {
+    color: #aabbd3;
+    font-size: 13px;
+}
+
+
+/* Drag and Drop Upload Area */
+
+.file-drop-area {
+    border: 2px dashed #438cff;
+    border-radius: 15px;
+    padding: 35px 20px;
+    text-align: center;
+    background: rgba(55, 130, 255, 0.06);
+    transition: 0.3s ease;
+    margin: 20px 0;
+}
+
+.file-drop-area.drag-over {
+    background: rgba(55, 130, 255, 0.18);
+    border-color: #75b5ff;
+    transform: scale(1.01);
+}
+
+.drop-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.file-drop-area h3 {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.file-drop-area p {
+    color: #aabbd3;
+    margin: 10px 0;
+}
+
+.select-file-button {
+    background: #2878e8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.select-file-button:hover {
+    background: #4595ff;
+}
+
+.upload-hint {
+    font-size: 12px;
+}
+
+/* gradient fluid effect */
+/* =================================
+   DROPLY - FLUID ANIMATED BACKGROUND
+================================= */
+
+body {
+    background: #080d20;
+    color: #ffffff;
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+}
+
+/* Animated gradient blobs */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.55;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body::before {
+    background: radial-gradient(circle, #2563eb, #5426c7, transparent 70%);
+    top: -180px;
+    left: -150px;
+    animation: fluidMoveOne 14s ease-in-out infinite alternate;
+}
+
+body::after {
+    background: radial-gradient(circle, #00bcd4, #3655df, transparent 70%);
+    bottom: -200px;
+    right: -150px;
+    animation: fluidMoveTwo 17s ease-in-out infinite alternate;
+}
+
+@keyframes fluidMoveOne {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(250px, 180px) scale(1.3);
+    }
+    100% {
+        transform: translate(100px, 350px) scale(0.9);
+    }
+}
+
+@keyframes fluidMoveTwo {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(-250px, -150px) scale(1.2);
+    }
+    100% {
+        transform: translate(-100px, -300px) scale(0.9);
+    }
+}
+
+
+
+/* glassmorphism */
+
+
+
+/* =================================
+   GLASSMORPHISM PANELS
+================================= */
+
+#workspace,
+.owner-controls,
+.file-drop-area,
+.loading-box,
+.home-container,
+.container {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Upload area */
+
+.file-drop-area {
+    background: rgba(45, 110, 255, 0.08);
+    border: 2px dashed rgba(100, 170, 255, 0.55);
+    transition: all 0.35s ease;
+}
+
+.file-drop-area:hover,
+.file-drop-area.drag-over {
+    background: rgba(50, 130, 255, 0.18);
+    border-color: #60a5fa;
+    box-shadow: 0 0 30px rgba(50, 130, 255, 0.2);
+}
+
+/* Text editor */
+
+textarea,
+input:not([type="file"]) {
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    transition: 0.3s ease;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 18px rgba(59, 130, 246, 0.2);
+}
+
+/* Buttons */
+
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+}
+
+/* Loading box */
+
+.loading-box {
+    background: rgba(20, 35, 70, 0.72);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Owner dashboard */
+
+.owner-controls {
+    padding: 22px;
+    margin-top: 20px;
+}
+
+.select-file-button {
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    border-radius: 12px;
+    padding: 13px 26px;
+    box-shadow: 0 5px 20px rgba(59, 130, 246, 0.3);
+}
+
+.select-file-button:hover {
+    background: linear-gradient(135deg, #3b82f6, #9333ea);
+    box-shadow: 0 8px 30px rgba(59, 130, 246, 0.5);
+}
+
+/* Custom Droply scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#3b82f6, #7c3aed);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #60a5fa;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    body::after {
+        animation: none;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+/* =========================================
+   DROPLY - PREMIUM GLASS BUTTONS
+========================================= */
+
+/* General glass button design */
+button,
+.select-file-button {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.16),
+        rgba(255, 255, 255, 0.04)
+    ) !important;
+
+    color: rgba(255, 255, 255, 0.95) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 13px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18),
+        inset 0 1px 1px rgba(255, 255, 255, 0.18),
+        inset 0 -1px 1px rgba(255, 255, 255, 0.05);
+
+    padding: 12px 22px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+
+    transition: all 0.3s ease;
+}
+
+/* Glass reflection */
+button::before,
+.select-file-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255, 255, 255, 0.22),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+    pointer-events: none;
+}
+
+button:hover::before,
+.select-file-button:hover::before {
+    left: 150%;
+}
+
+/* Hover glow */
+button:hover,
+.select-file-button:hover {
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        135deg,
+        rgba(75, 145, 255, 0.28),
+        rgba(140, 90, 255, 0.18)
+    ) !important;
+
+    border-color: rgba(130, 180, 255, 0.65) !important;
+
+    box-shadow:
+        0 10px 30px rgba(40, 110, 255, 0.22),
+        inset 0 1px 2px rgba(255, 255, 255, 0.25);
+}
+
+/* Click effect */
+button:active,
+.select-file-button:active {
+    transform: scale(0.97);
+}
+
+/* =========================================
+   CREATE SPACE BUTTON
+========================================= */
+
+#createSpaceButton,
+.create-space-button {
+    background: linear-gradient(
+        135deg,
+        rgba(45, 125, 255, 0.35),
+        rgba(125, 75, 255, 0.25)
+    ) !important;
+
+    border: 1px solid rgba(120, 175, 255, 0.5) !important;
+
+    box-shadow:
+        0 5px 25px rgba(50, 110, 255, 0.2),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* =========================================
+   UPLOAD BUTTON
+========================================= */
+
+.select-file-button {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 170, 255, 0.28),
+        rgba(80, 100, 255, 0.25)
+    ) !important;
+
+    border: 1px solid rgba(100, 190, 255, 0.5) !important;
+}
+
+/* =========================================
+   OWNER DASHBOARD BUTTONS
+========================================= */
+
+.owner-controls button {
+    margin: 6px;
+    min-width: 145px;
+
+    background: rgba(255, 255, 255, 0.09) !important;
+    border: 1px solid rgba(255, 255, 255, 0.22) !important;
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+}
+
+/* Danger button - delete space */
+.owner-controls .danger-button {
+    background: rgba(255, 65, 85, 0.13) !important;
+    border: 1px solid rgba(255, 100, 120, 0.4) !important;
+}
+
+.owner-controls .danger-button:hover {
+    background: rgba(255, 50, 70, 0.3) !important;
+    box-shadow: 0 8px 25px rgba(255, 50, 70, 0.2);
+}
+
+/* =========================================
+   GLASS TEXT INPUTS AND EDITOR
+========================================= */
+
+input:not([type="file"]),
+textarea {
+    background: rgba(255, 255, 255, 0.055) !important;
+
+    color: rgba(255, 255, 255, 0.95) !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.17) !important;
+    border-radius: 13px;
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow:
+        inset 0 2px 10px rgba(0, 0, 0, 0.12),
+        0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: rgba(220, 230, 255, 0.48);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.09) !important;
+
+    border-color: rgba(100, 170, 255, 0.7) !important;
+
+    box-shadow:
+        0 0 20px rgba(60, 130, 255, 0.16),
+        inset 0 1px 5px rgba(255, 255, 255, 0.08);
+}
+
+/* =========================================
+   GLASS TEXT AND LABELS
+========================================= */
+
+.owner-controls h3,
+.file-drop-area h3 {
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 2px 15px rgba(100, 150, 255, 0.2);
+}
+
+.owner-controls,
+.file-drop-area {
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+}
+
+/* Disabled button */
+button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    button,
+    .select-file-button {
+        transition: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   DROPLY - RESPONSIVE LOADING SCREEN
+===================================== */
+
+#loadingOverlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 99999;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.loading-content {
+    width: min(100%, 360px);
+    padding: clamp(22px, 6vw, 35px);
+
+    box-sizing: border-box;
+    text-align: center;
+
+    border-radius: 24px;
+    background: rgba(10, 18, 38, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+}
+
+.loading-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.loading-spinner {
+    width: clamp(35px, 10vw, 48px);
+    height: clamp(35px, 10vw, 48px);
+
+    margin: 0 auto 18px;
+    border: 4px solid rgba(255, 255, 255, 0.15);
+    border-top-color: #78aaff;
+    border-radius: 50%;
+
+    animation: droplySpin 0.8s linear infinite;
+}
+
+@keyframes droplySpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    #loadingOverlay {
+        padding: 16px;
+    }
+
+    .loading-content {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 20px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 350px) {
+    .loading-content {
+        padding: 20px 16px;
+    }
+}
+
+
+
+
+/* =================================
+   DROPLY - MOBILE RESPONSIVE DESIGN
+================================= */
+
+@media screen and (max-width: 768px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        min-height: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        -webkit-text-size-adjust: 100%;
+    }
+
+    .container,
+    .home,
+    .workspace {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    button {
+        min-height: 44px;
+        max-width: 100%;
+        touch-action: manipulation;
+    }
+
+    input,
+    textarea {
+        max-width: 100%;
+        font-size: 16px;
+    }
+
+    img,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    button {
+        padding: 12px 16px;
+    }
+
+    input,
+    textarea {
+        padding: 12px;
+    }
+}
+
+
+
+
+
+
+/* =====================================
+   DROPLY - PREMIUM MOBILE HOME SCREEN
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 28px 16px 18px;
+        text-align: center;
+    }
+
+    header .logo {
+        font-size: clamp(30px, 8vw, 38px);
+        font-weight: 800;
+    }
+
+    header p {
+        font-size: 13px;
+        margin-top: 6px;
+    }
+
+    #home.container {
+        width: calc(100% - 28px);
+        max-width: 440px;
+        margin: 20px auto 35px;
+        padding: 24px 18px;
+        border-radius: 24px;
+    }
+
+    #home .hero {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    #home .hero h1 {
+        font-size: clamp(30px, 8vw, 40px);
+        line-height: 1.15;
+        letter-spacing: -1px;
+        margin-bottom: 14px;
+    }
+
+    #home .hero p {
+        font-size: 14px;
+        line-height: 1.7;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    #home .code-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    #home .code-box input {
+        width: 100%;
+        min-height: 52px;
+        border-radius: 14px;
+        padding: 14px 16px;
+        font-size: 16px;
+    }
+
+    #home .code-box button {
+        width: 100%;
+        min-height: 52px;
+        border-radius: 14px;
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    footer {
+        padding: 20px 12px;
+        text-align: center;
+        font-size: 12px;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  #workspace.container {
+    width: calc(100% - 24px);
+    max-width: 100%;
+    margin: 12px auto 25px;
+    padding: 18px 14px;
+    border-radius: 22px;
+  }
+
+  .workspace-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .workspace-header button,
+  #ownerControls button,
+  .editor button,
+  .upload-section button,
+  .back-btn {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .editor,
+  .upload-section,
+  #ownerControls {
+    width: 100%;
+    margin-top: 18px;
+  }
+
+  #textContent {
+    width: 100%;
+    min-height: 180px;
+    font-size: 16px;
+    line-height: 1.6;
+    box-sizing: border-box;
+  }
+
+  .file-drop-area {
+    width: 100%;
+    min-height: 150px;
+    padding: 22px 12px;
+    box-sizing: border-box;
+  }
+
+  #fileSearch {
+    width: 100%;
+    min-height: 46px;
+    box-sizing: border-box;
+  }
+
+  #fileList {
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  #fileList > * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #fileList button {
+    min-height: 40px;
+    padding: 9px 12px;
+  }
+
+  #fileList a,
+  #fileList span,
+  #fileList p {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  #fileList img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  #fileList video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  #loadingScreen {
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  #loadingScreen .loading-box {
+    width: min(100%, 340px);
+    padding: 30px 22px;
+    border-radius: 22px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  #loadingScreen .loading-spinner {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #loadingScreen p {
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+}
+@media screen and (max-width: 600px) {
+  button,
+  .select-file-button {
+    min-height: 48px;
+    font-size: 15px;
+    border-radius: 14px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button:active,
+  .select-file-button:active {
+    transform: scale(0.98);
+  }
+
+  input,
+  textarea {
+    border-radius: 12px;
+  }
+
+  button,
+  input,
+  textarea {
+    touch-action: manipulation;
+  }
+}

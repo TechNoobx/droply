@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Droply - Share Everything</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Droply<span>.</span></div>
+        <p>Everything shared through one code.</p>
+    </header>
+
+    <main>
+
+        <section id="home" class="container">
+            <div class="hero">
+                <h1>Your files.<br>One simple code.</h1>
+                <p>Create a space or enter an existing code
+                   to share text, images and files.</p>
+            </div>
+
+            <div class="code-box">
+                <input
+                    type="text"
+                    id="spaceCode"
+                    placeholder="Enter Droply code"
+                    maxlength="40"
+                >
+
+                <button onclick="openSpace()">
+                    Create / Open Space
+                </button>
+            </div>
+
+            <!-- <div class="features">
+                <div>📝 Text</div>
+                <div>🖼️ Images</div>
+                <div>📁 Files</div>
+                <div>🔗 Sharing</div>
+            </div> -->
+        </section>
+
+        <section id="workspace" class="container hidden">
+            <div id="ownerControls" class="owner-controls hidden">
+
+    <h3>Space Owner Dashboard</h3>
+
+    <button onclick="changeSpacePassword()">
+        Change Password
+    </button>
+
+    <button onclick="deleteAllFiles()">
+        Delete All Files
+    </button>
+
+    <button onclick="deleteEntireSpace()" class="danger-button">
+        Delete Entire Space
+    </button>
+
+</div>
+
+            <div class="workspace-header">
+                <div>
+                    <h2>Droply Workspace</h2>
+                    <p>Code: <strong id="currentCode"></strong></p>
+                </div>
+
+                <button onclick="copyLink()" class="share-btn">
+                    Copy Link
+                </button>
+            </div>
+
+            <div class="editor">
+                <h3>Your Shared Text</h3>
+
+                <textarea
+    id="textContent"
+    oninput="handleTextInput()"
+    placeholder="Start typing here..."
+></textarea>
+
+                <button onclick="saveText()">Save Text</button>
+                <span id="saveStatus"></span>
+            </div>
+
+            <div class="upload-section">
+                <h3>Upload Files</h3>
+
+                <div id="fileDropArea" class="file-drop-area">
+
+    <div class="drop-icon">☁️</div>
+
+    <h3>Drag & Drop Files Here</h3>
+
+    <p>or</p>
+
+    <input
+        type="file"
+        id="fileInput"
+        multiple
+        hidden
+    >
+
+    <button
+        type="button"
+        class="select-file-button"
+        onclick="document.getElementById('fileInput').click()"
+    >
+        <span>📁</span> Select Files
+    </button>
+
+    <p class="upload-hint">Maximum file size: 10 MB per file</p>
+
+</div>
+                <progress id="uploadProgress" value="0" max="100"></progress>
+<p id="uploadProgressText"></p>
+
+
+<input
+    type="text"
+    id="fileSearch"
+    placeholder="Search uploaded files..."
+    oninput="searchFiles()"
+>
+
+                <div id="fileList"></div>
+            </div>
+
+            <button class="back-btn" onclick="goHome()">
+                ← Back to Home
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Droply. Share anything, anywhere.</p>
+        <br>
+        <p>Created By <span style="font-weight: 100;">Tech</span><span style="color: whitesmoke;">Noobs</span></p>
+    </footer>
+
+    <!-- Supabase JavaScript SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/tus-js-client@4/dist/tus.min.js"></script>
+<!-- Droply JavaScript -->
+<script src="script.js"></script>
+
+<!-- Droply Loading Screen -->
+<div id="loadingScreen" class="loading-screen hidden">
+    <div class="loading-box">
+        <div class="loading-spinner"></div>
+        <h3 id="loadingMessage">Please wait...</h3>
+        <p>Droply is processing your request</p>
+    </div>
+</div>
+
+</body>
+</html>
