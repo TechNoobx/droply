@@ -1222,3 +1222,22 @@ button:disabled {
     touch-action: manipulation;
   }
 }
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.logo h2 {
+    font-size: 25px;
+    font-weight: bold;
+}
